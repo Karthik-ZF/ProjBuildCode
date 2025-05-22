@@ -1,0 +1,20 @@
+/* Enter your custom styles here */
+.panel {
+    border-radius: 0px;
+    margin-left: 0px;
+    background-color: #2b556d;
+    text-align: left;
+    color: white;
+    padding-left: 0px;
+}
+
+.input {
+    text-align: justify;
+    margin-left: 0px;
+    background-color: #9ba3a9;
+    text-align: left;
+    font-size: 1.0rem;
+    color: black;
+    text-wrap: wrap;
+    panel-left: 0px;
+}

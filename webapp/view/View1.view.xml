@@ -1,0 +1,66 @@
+<mvc:View controllerName="mrpscan.mrpscanning.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:cssgrid="sap.ui.layout.cssgrid" xmlns:layout="sap.ui.layout">
+    <Page id="page" title="{i18n>title}">
+        <Panel id="panel1" class="panel">
+            <layout:VerticalLayout id="vlayout" class="panel">
+                <cssgrid:CSSGrid id="grid1" gridTemplateColumns="120px">
+                    <Text id="txt1" text="" />
+                </cssgrid:CSSGrid>
+                <cssgrid:CSSGrid id="grid2" gridTemplateColumns="120px 150px">
+                    <Input id="txt2" value="Delivery" editable="false" class="input" />
+                    <Input id="inpvbeln" class="input" />
+                </cssgrid:CSSGrid>
+                <cssgrid:CSSGrid id="grid3" gridTemplateColumns="120px 150px">
+                    <Input id="txt3" value="Customer" editable="false" class="input" />
+                    <Input id="Customer" editable="false" class="input" />
+                </cssgrid:CSSGrid>
+            </layout:VerticalLayout>
+        </Panel>
+        <Panel id="panel2" class="panel">
+            <layout:VerticalLayout id="vlayout1" class="panel">
+                <cssgrid:CSSGrid id="grid5" gridTemplateColumns="120px">
+                    <Text id="txt51" text="" />
+                </cssgrid:CSSGrid>
+                <cssgrid:CSSGrid id="grid6" gridTemplateColumns="120px 150px">
+                    <Input id="txt52" value="Scan(MRPLabel)" editable="false" class="input" />
+                    <Input id="inpmrplabel" class="input" />
+                </cssgrid:CSSGrid>
+                <cssgrid:CSSGrid id="grid4" gridTemplateColumns="90px auto">
+                    <Button id="btnGO" text="GO" press=".onGoPress" />
+                </cssgrid:CSSGrid>
+            </layout:VerticalLayout>
+        </Panel>
+        <Table id="delvtable" items="{delvDetails>/}">
+            <columns>
+                <Column>
+                    <Text text="Material" />
+                </Column>
+                <Column>
+                    <Text text="Description" />
+                </Column>
+                <Column>
+                    <Text text="Quantity" />
+                </Column>
+                <Column>
+                    <Text text="Scanned" />
+                </Column>
+                <Column>
+                    <Text text="Difference" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{delvDetails>MATNR}" />
+                        <Text text="{delvDetails>MAKTX}" />
+                        <Text text="{delvDetails>LFIMG}" />
+                        <Text text="{delvDetails>SCAN_QTY}" />
+                        <Text text="{delvDetails>DIFF_QTY}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
