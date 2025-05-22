@@ -27,7 +27,7 @@
                     <Input id="txt52" value="Scan(MRPLabel)" editable="false" class="input" />
                     <Input id="inpmrplabel" class="input" />
                 </cssgrid:CSSGrid>
-                <cssgrid:CSSGrid id="grid4" gridTemplateColumns="90px auto">
+                <cssgrid:CSSGrid id="grid4" gridTemplateColumns="90px">
                     <Button id="btnGO" text="GO" press=".onGoPress" />
                 </cssgrid:CSSGrid>
             </layout:VerticalLayout>
